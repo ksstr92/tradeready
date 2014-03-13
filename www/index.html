@@ -37,6 +37,24 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
+
+            function alertDismissed() {
+                // do something
+            }
+
+            navigator.notification.alert(
+                'You are the winner!',  // message
+                alertDismissed,         // callback
+                'Game Over',            // title
+                'Done'                  // buttonName
+            );
+
+            // BlackBerry (OS 4.6) / webOS
+            //
+            navigator.notification.alert('You are the winner!');
+                        
         </script>
+
+
     </body>
 </html>
